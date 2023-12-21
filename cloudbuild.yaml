@@ -7,7 +7,7 @@ steps:
   args: ['push', 'gcr.io/$PROJECT_ID/bengkelsaku']
   # Deploy container image to Cloud Run
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: ['beta', 'run', 'deploy', '$REPO_NAME', '--image', 'gcr.io/$PROJECT_ID/bengkelsaku', '--region', '${_REGION}', '--platform', 'managed', '--allow-unauthenticated']
+  args: ['beta', 'run', 'deploy', 'bengkelsaku', '--image', 'gcr.io/$PROJECT_ID/bengkelsaku', '--region', '${_REGION}', '--platform', 'managed', '--allow-unauthenticated']
 
 substitutions:
   _REGION: us_central1 # default value
