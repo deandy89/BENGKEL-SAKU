@@ -11,8 +11,9 @@ default_app = initialize_app(cred)
 db = firestore.client()
 todo_ref = db.collection('todos')
 
-# @app.route('/', methods=['GET'])
-#     return jsonify({"success": True}), 200
+@app.route('/', methods=['GET'])
+def index():
+    return ({"success": True}), 200
 
 @app.route('/add', methods=['POST'])
 def create():
