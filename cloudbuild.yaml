@@ -10,6 +10,7 @@ steps:
   args: ['beta', 'run', 'deploy', 'bengkelsaku', '--image', 'gcr.io/$PROJECT_ID/bengkelsaku', '--region', '${_REGION}', '--platform', 'managed', '--allow-unauthenticated']
 
 substitutions:
-  _REGION: us_central1 # default value
+  _REGION: us-central1
+  # default value
 images:
 - gcr.io/$PROJECT_ID/bengkelsaku
