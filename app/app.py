@@ -81,6 +81,7 @@ def delete(delID):
             }), 404
     except Exception as e:
         return f"An Error Occured: {e}"
-port = int(os.environ.get('PORT', 8080))
+port = int(os.environ.get('PORT', 80))
+
 if __name__ == '__main__':
-    app.run(threaded=True, host='0.0.0.0', port=port)
+        app.run(threaded=True, host='0.0.0.0', port=port)
